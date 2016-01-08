@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <container name="QualityExcitesPage">
+  <!-- Generic components -->
+  <component name="ButtonByText" pxpath="//button[text()='{0}']" />
+  
+  <!-- Top menu -->
   <component name="Logo" id="logo" />
   <component name="MenuLink" pxpath="//li[starts-with(@id, 'menu-item')]/a[text()='{0}']" />
   <component name="Header" xpath="//h2" />
@@ -12,6 +16,13 @@
   </container>
 
   <container name="CallForProposalsPage">
+    <component name="TitleInput" id ="input-temat" />
+    <component name="DescriptionInput" id="text-abstrakt" />
+    <component name="FormSelect" id="length" />
+    <component name="SpeakerOption" pid="experience_{0}" />
+    <component name="PresentedOption" pid="presented_{0}" />
+    <component name="Upload" xpath="//input[@type='file']" />
+                         
   </container>
 
   <container name="QualityMeetupPage">

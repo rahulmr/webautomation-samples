@@ -4,7 +4,7 @@ using WebAutomationSample.Tests.Common;
 namespace WebAutomationSample.Tests.Steps
 {
     [Binding]
-    public class CommonSteps : SpecFlowTest
+    public class ScenarioSteps : SpecFlowTest
     {
         [BeforeScenario]
         public void BeforeScenario()

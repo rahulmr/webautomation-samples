@@ -89,6 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AccessToPages.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\CallForProposals.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CallForProposals.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\QualityExcites.cs">
       <AutoGen>True</AutoGen>
@@ -97,12 +102,8 @@
     </Compile>
     <Compile Include="SpecFlowGenericSteps.cs" />
     <Compile Include="Steps\CallForProposalsSteps.cs" />
-    <Compile Include="Steps\CommonSteps.cs" />
-    <Compile Include="Steps\ConferenceSteps.cs" />
-    <Compile Include="Steps\ContactSteps.cs" />
+    <Compile Include="Steps\Common\ScenarioSteps.cs" />
     <Compile Include="Steps\NavigationSteps.cs" />
-    <Compile Include="Steps\OrganisersSteps.cs" />
-    <Compile Include="Steps\QualityMeetupSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -110,11 +111,18 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AccessToPages.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\CallForProposals.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CallForProposals.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
     <None Include="Pages\QualityExcites.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>QualityExcites.cs</LastGenOutput>
     </None>
+    <Content Include="Resources\Presentation.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="WebAutomation.Core.Unity.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

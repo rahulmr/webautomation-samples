@@ -1,4 +1,5 @@
 ﻿using TechTalk.SpecFlow;
+using WebAutomation.Core.WebObjects.WebComponents.Actions;
 using WebAutomationSample.Tests.Common;
 using WebAutomationSample.Tests.Pages;
 
@@ -29,6 +30,12 @@ namespace WebAutomationSample.Tests.Steps
             var header = this.Page.Header;
             header.Assert.Is.Displayed();
             header.Assert.Has.Text(pageName.ToUpper());
+        }
+
+        [When(@"User clicks on '(.*)' button")]
+        public void WhenUserClicksOnButton(string buttonName)
+        {
+            this.Page.ButtonByText.With(buttonName).Perform.Click();
         }
     }
 }

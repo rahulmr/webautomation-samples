@@ -21,6 +21,10 @@ namespace WebAutomationSample.Tests.Pages
 	[Name("QualityExcitesPage")]
 	public partial class QualityExcitesPage 
 	{
+		[Name("ButtonByText")]
+		[Pxpath("//button[text()='{0}']")]
+		public IWebComponent ButtonByText { get; set; }
+
 		[Name("Logo")]
 		[Id("logo")]
 		public IWebComponent Logo { get; set; }
@@ -48,6 +52,30 @@ namespace WebAutomationSample.Tests.Pages
 	[Name("CallForProposalsPage")]
 	public partial class CallForProposalsPage : QualityExcitesPage
 	{
+		[Name("TitleInput")]
+		[Id("input-temat")]
+		public IWebComponent TitleInput { get; set; }
+
+		[Name("DescriptionInput")]
+		[Id("text-abstrakt")]
+		public IWebComponent DescriptionInput { get; set; }
+
+		[Name("FormSelect")]
+		[Id("length")]
+		public IWebComponent FormSelect { get; set; }
+
+		[Name("SpeakerOption")]
+		[Pid("experience_{0}")]
+		public IWebComponent SpeakerOption { get; set; }
+
+		[Name("PresentedOption")]
+		[Pid("presented_{0}")]
+		public IWebComponent PresentedOption { get; set; }
+
+		[Name("Upload")]
+		[Xpath("//input[@type='file']")]
+		public IWebComponent Upload { get; set; }
+
 	}
 
 	[Name("QualityMeetupPage")]
