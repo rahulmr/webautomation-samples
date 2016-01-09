@@ -17,6 +17,7 @@ namespace WebAutomationSample.Tests.Steps
         }
 
         [Given(@"User navigates to '(.+)' page")]
+        [When(@"User navigates to '(.+)' page")]
         public void GivenIDoSomething(string pageName)
         {
             var menuLink = this.Page.MenuLink.With(pageName);
@@ -30,6 +31,12 @@ namespace WebAutomationSample.Tests.Steps
             var header = this.Page.Header;
             header.Assert.Is.Displayed();
             header.Assert.Has.Text(pageName.ToUpper());
+        }
+
+        [When(@"User clicks on submit button")]
+        public void WhenUserClicksOnSubmitButton()
+        {
+            this.Page.SubmitButton.Perform.Click(ClickType.Script);
         }
 
         [When(@"User clicks on '(.*)' button")]

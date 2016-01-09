@@ -25,6 +25,10 @@ namespace WebAutomationSample.Tests.Pages
 		[Pxpath("//button[text()='{0}']")]
 		public IWebComponent ButtonByText { get; set; }
 
+		[Name("SubmitButton")]
+		[Id("input-submit")]
+		public IWebComponent SubmitButton { get; set; }
+
 		[Name("Logo")]
 		[Id("logo")]
 		public IWebComponent Logo { get; set; }
@@ -39,6 +43,71 @@ namespace WebAutomationSample.Tests.Pages
 
 	}
 
+	[Name("CallForProposalsPage")]
+	public partial class CallForProposalsPage : QualityExcitesPage
+	{
+		[Name("Title")]
+		[Id("input-temat")]
+		public IWebComponent Title { get; set; }
+
+		[Name("Description")]
+		[Id("text-abstrakt")]
+		public IWebComponent Description { get; set; }
+
+		[Name("Form")]
+		[Id("length")]
+		public IWebComponent Form { get; set; }
+
+		[Name("Speaker")]
+		[Pid("experience_{0}")]
+		public IWebComponent Speaker { get; set; }
+
+		[Name("Presented")]
+		[Pid("presented_{0}")]
+		public IWebComponent Presented { get; set; }
+
+		[Name("Presentation")]
+		[Xpath("//a[@id='add-file']/preceding-sibling::div/input[@type='file']")]
+		public IWebComponent Presentation { get; set; }
+
+		[Name("FirstName")]
+		[Id("input-imie")]
+		public IWebComponent FirstName { get; set; }
+
+		[Name("Surname")]
+		[Id("input-nazwisko")]
+		public IWebComponent Surname { get; set; }
+
+		[Name("Position")]
+		[Id("input-stanowisko")]
+		public IWebComponent Position { get; set; }
+
+		[Name("CompanyInstitution")]
+		[Id("input-firma")]
+		public IWebComponent CompanyInstitution { get; set; }
+
+		[Name("EmailAddress")]
+		[Id("input-email")]
+		public IWebComponent EmailAddress { get; set; }
+
+		[Name("PhoneNumber")]
+		[Id("input-phone")]
+		public IWebComponent PhoneNumber { get; set; }
+
+		[Name("Biography")]
+		[Id("text-biografia")]
+		public IWebComponent Biography { get; set; }
+
+		[Name("Photo")]
+		[Xpath("//a[@id='add-photo']/preceding-sibling::div/input[@type='file']")]
+		public IWebComponent Photo { get; set; }
+
+		[Name("Agreement")]
+		[Id("checkbox-regulamin")]
+		public IWebComponent Agreement { get; set; }
+
+	}
+
 	[Name("HomePage")]
 	public partial class HomePage : QualityExcitesPage
 	{
@@ -47,35 +116,6 @@ namespace WebAutomationSample.Tests.Pages
 	[Name("ConferencePage")]
 	public partial class ConferencePage : QualityExcitesPage
 	{
-	}
-
-	[Name("CallForProposalsPage")]
-	public partial class CallForProposalsPage : QualityExcitesPage
-	{
-		[Name("TitleInput")]
-		[Id("input-temat")]
-		public IWebComponent TitleInput { get; set; }
-
-		[Name("DescriptionInput")]
-		[Id("text-abstrakt")]
-		public IWebComponent DescriptionInput { get; set; }
-
-		[Name("FormSelect")]
-		[Id("length")]
-		public IWebComponent FormSelect { get; set; }
-
-		[Name("SpeakerOption")]
-		[Pid("experience_{0}")]
-		public IWebComponent SpeakerOption { get; set; }
-
-		[Name("PresentedOption")]
-		[Pid("presented_{0}")]
-		public IWebComponent PresentedOption { get; set; }
-
-		[Name("Upload")]
-		[Xpath("//input[@type='file']")]
-		public IWebComponent Upload { get; set; }
-
 	}
 
 	[Name("QualityMeetupPage")]

@@ -3,28 +3,40 @@
 <container name="QualityExcitesPage">
   <!-- Generic components -->
   <component name="ButtonByText" pxpath="//button[text()='{0}']" />
-  
+  <component name="SubmitButton" id="input-submit" />
+
   <!-- Top menu -->
   <component name="Logo" id="logo" />
   <component name="MenuLink" pxpath="//li[starts-with(@id, 'menu-item')]/a[text()='{0}']" />
   <component name="Header" xpath="//h2" />
-  
+
+  <container name="CallForProposalsPage">
+    <!-- Step 1 -->
+    <component name="Title" id ="input-temat" />
+    <component name="Description" id="text-abstrakt" />
+    <component name="Form" id="length" />
+    <component name="Speaker" pid="experience_{0}" />
+    <component name="Presented" pid="presented_{0}" />
+    <component name="Presentation" xpath="//a[@id='add-file']/preceding-sibling::div/input[@type='file']" />
+
+    <!-- Step 2 -->
+    <component name="FirstName" id="input-imie" />
+    <component name="Surname" id="input-nazwisko" />
+    <component name="Position" id="input-stanowisko" />
+    <component name="CompanyInstitution" id="input-firma" />
+    <component name="EmailAddress" id="input-email" />
+    <component name="PhoneNumber" id="input-phone" />
+    <component name="Biography" id="text-biografia" />
+    <component name="Photo" xpath="//a[@id='add-photo']/preceding-sibling::div/input[@type='file']" />
+    <component name="Agreement" id="checkbox-regulamin" />
+  </container>
+
   <container name="HomePage">
   </container>
 
   <container name="ConferencePage">
   </container>
-
-  <container name="CallForProposalsPage">
-    <component name="TitleInput" id ="input-temat" />
-    <component name="DescriptionInput" id="text-abstrakt" />
-    <component name="FormSelect" id="length" />
-    <component name="SpeakerOption" pid="experience_{0}" />
-    <component name="PresentedOption" pid="presented_{0}" />
-    <component name="Upload" xpath="//input[@type='file']" />
-                         
-  </container>
-
+  
   <container name="QualityMeetupPage">
   </container>
 
@@ -33,5 +45,5 @@
 
   <container name="ContactPage">
   </container>
-  
+
 </container>

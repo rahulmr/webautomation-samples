@@ -7,30 +7,16 @@ namespace WebAutomationSample.Tests.Common
 {
     public class SpecFlowTest : SpecFlowTestBase
     {
-        public string PageUrl
-        {
-            get
-            {
-                return ConfigurationManager.AppSettings["PageUrl"];
-            }
-        }
+        public Settings Settings { get; set; }
 
-        public string BrowserType
+        public SpecFlowTest()
         {
-            get
-            {
-                return ConfigurationManager.AppSettings["BrowserType"];
-            }
-        }
-
-        public void NavigateToHomePage()
-        {
-            this.WebDriver.Navigate().GoToUrl(this.PageUrl);
+            this.Settings = new Settings();
         }
 
         public void OpenBrowser()
         {
-            switch (this.BrowserType)
+            switch (this.Settings.BrowserType)
             {
                 case "firefox":
                     this.WebDriver = new FirefoxDriver();
@@ -41,6 +27,11 @@ namespace WebAutomationSample.Tests.Common
             }
             
             this.WebDriver.Manage().Window.Maximize();
+        }
+
+        public void NavigateToHomePage()
+        {
+            this.WebDriver.Navigate().GoToUrl(this.Settings.PageUrl);
         }
     }
 }

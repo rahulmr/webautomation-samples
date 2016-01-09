@@ -66,7 +66,7 @@ namespace WebAutomationSample.Tests.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("I can access each page from the top menu")]
-        [NUnit.Framework.CategoryAttribute("automates")]
+        [NUnit.Framework.CategoryAttribute("automated")]
         [NUnit.Framework.TestCaseAttribute("Conference", null)]
         [NUnit.Framework.TestCaseAttribute("Call for proposals", null)]
         [NUnit.Framework.TestCaseAttribute("Quality Meetup", null)]
@@ -75,7 +75,7 @@ namespace WebAutomationSample.Tests.Features
         public virtual void ICanAccessEachPageFromTheTopMenu(string pageName, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "automates"};
+                    "automated"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -84,7 +84,7 @@ namespace WebAutomationSample.Tests.Features
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
- testRunner.Given(string.Format("User navigates to \'{0}\' page", pageName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When(string.Format("User navigates to \'{0}\' page", pageName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 6
  testRunner.Then(string.Format("\'{0}\' page is displayed", pageName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

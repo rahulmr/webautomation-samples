@@ -83,6 +83,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Common\Extensions\StringExtensions.cs" />
+    <Compile Include="Common\Settings.cs" />
     <Compile Include="Common\SpecFlowTest.cs" />
     <Compile Include="Features\AccessToPages.feature.cs">
       <AutoGen>True</AutoGen>
@@ -101,7 +103,7 @@
       <DependentUpon>QualityExcites.tt</DependentUpon>
     </Compile>
     <Compile Include="SpecFlowGenericSteps.cs" />
-    <Compile Include="Steps\CallForProposalsSteps.cs" />
+    <Compile Include="Steps\Common\GenericSteps.cs" />
     <Compile Include="Steps\Common\ScenarioSteps.cs" />
     <Compile Include="Steps\NavigationSteps.cs" />
   </ItemGroup>
@@ -120,6 +122,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>QualityExcites.cs</LastGenOutput>
     </None>
+    <Content Include="Resources\Photo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Presentation.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -128,7 +133,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Pages\QualityExcites.xml" />
+    <Content Include="Pages\QualityExcites.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="WebAutomation.Generator.dll" />
   </ItemGroup>
   <ItemGroup>

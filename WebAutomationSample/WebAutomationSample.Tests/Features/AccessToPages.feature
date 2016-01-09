@@ -1,8 +1,8 @@
 ﻿Feature: Access to page
 
-@automates
+@automated
 Scenario Outline: I can access each page from the top menu
-	Given User navigates to '<PageName>' page
+	When User navigates to '<PageName>' page
 	Then '<PageName>' page is displayed
 
 Examples:

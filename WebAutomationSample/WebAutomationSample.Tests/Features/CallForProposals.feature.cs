@@ -78,28 +78,81 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "name",
-                        "value"});
+                        "value",
+                        "type"});
             table1.AddRow(new string[] {
                         "title",
-                        "Presentation 1"});
+                        "Presentation 1",
+                        ""});
             table1.AddRow(new string[] {
                         "form",
-                        "lecture (25 minutes)"});
+                        "lecture (25 minutes)",
+                        "select"});
             table1.AddRow(new string[] {
                         "speaker",
-                        "no"});
+                        "no",
+                        "radio"});
             table1.AddRow(new string[] {
                         "presented",
-                        "no"});
+                        "no",
+                        "radio"});
             table1.AddRow(new string[] {
-                        "file",
-                        "Presentation.txt"});
+                        "presentation",
+                        "Presentation.txt",
+                        "file"});
+            table1.AddRow(new string[] {
+                        "description",
+                        "400",
+                        "characters"});
 #line 6
- testRunner.When("User fills following fields", ((string)(null)), table1, "When ");
-#line 13
- testRunner.And("User fills \'description\' field with \'400\' characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("User fills following fields on \'Call for proposals\' page", ((string)(null)), table1, "When ");
 #line 14
  testRunner.And("User clicks on \'Next step\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "name",
+                        "value",
+                        "type"});
+            table2.AddRow(new string[] {
+                        "first name",
+                        "Mark",
+                        ""});
+            table2.AddRow(new string[] {
+                        "surname",
+                        "Smith",
+                        ""});
+            table2.AddRow(new string[] {
+                        "position",
+                        "QA",
+                        ""});
+            table2.AddRow(new string[] {
+                        "company institution",
+                        "FP",
+                        ""});
+            table2.AddRow(new string[] {
+                        "email address",
+                        "test@test.test",
+                        ""});
+            table2.AddRow(new string[] {
+                        "phone number",
+                        "123123123",
+                        ""});
+            table2.AddRow(new string[] {
+                        "biography",
+                        "400",
+                        "characters"});
+            table2.AddRow(new string[] {
+                        "photo",
+                        "Photo.png",
+                        "file"});
+            table2.AddRow(new string[] {
+                        "agreement",
+                        "yes",
+                        "checkbox"});
+#line 15
+ testRunner.And("User fills following fields on \'Call for proposals\' page", ((string)(null)), table2, "And ");
+#line 26
+ testRunner.And("User clicks on submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
