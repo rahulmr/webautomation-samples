@@ -106,6 +106,10 @@ namespace WebAutomationSample.Tests.Pages
 		[Id("checkbox-regulamin")]
 		public IWebComponent Agreement { get; set; }
 
+		[Name("Captcha")]
+		[Id("input-captcha")]
+		public IWebComponent Captcha { get; set; }
+
 	}
 
 	[Name("HomePage")]

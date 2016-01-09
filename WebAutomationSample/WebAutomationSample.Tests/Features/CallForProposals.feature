@@ -23,4 +23,6 @@ Scenario: Register with correct data
 		| biography           | 400            | characters |
 		| photo               | Photo.png      | file       |
 		| agreement           | yes            | checkbox   |
+		| captcha             | 1234           |            |
 	And User clicks on submit button
+	Then User is successfully registered

@@ -149,10 +149,16 @@ this.ScenarioSetup(scenarioInfo);
                         "agreement",
                         "yes",
                         "checkbox"});
+            table2.AddRow(new string[] {
+                        "captcha",
+                        "1234",
+                        ""});
 #line 15
  testRunner.And("User fills following fields on \'Call for proposals\' page", ((string)(null)), table2, "And ");
-#line 26
+#line 27
  testRunner.And("User clicks on submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+ testRunner.Then("User is successfully registered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

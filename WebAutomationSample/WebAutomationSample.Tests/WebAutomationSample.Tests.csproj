@@ -103,6 +103,7 @@
       <DependentUpon>QualityExcites.tt</DependentUpon>
     </Compile>
     <Compile Include="SpecFlowGenericSteps.cs" />
+    <Compile Include="Steps\CallForProposalsSteps.cs" />
     <Compile Include="Steps\Common\GenericSteps.cs" />
     <Compile Include="Steps\Common\ScenarioSteps.cs" />
     <Compile Include="Steps\NavigationSteps.cs" />

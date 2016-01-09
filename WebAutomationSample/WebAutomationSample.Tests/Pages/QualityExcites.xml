@@ -29,6 +29,7 @@
     <component name="Biography" id="text-biografia" />
     <component name="Photo" xpath="//a[@id='add-photo']/preceding-sibling::div/input[@type='file']" />
     <component name="Agreement" id="checkbox-regulamin" />
+    <component name="Captcha" id="input-captcha" />
   </container>
 
   <container name="HomePage">
