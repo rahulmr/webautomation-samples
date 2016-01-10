@@ -36,7 +36,7 @@ namespace WebAutomationSample.Tests.Steps
         [When(@"User clicks on submit button")]
         public void WhenUserClicksOnSubmitButton()
         {
-            this.Page.SubmitButton.Perform.Click(ClickType.Script);
+            this.Page.SubmitButton.Perform.Click();
         }
 
         [When(@"User clicks on '(.*)' button")]

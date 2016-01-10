@@ -2,7 +2,7 @@
 using WebAutomationSample.Tests.Common;
 using WebAutomationSample.Tests.Pages;
 
-namespace WebAutomationSample.Tests.Steps
+namespace WebAutomationSample.Tests.Steps.Custom
 {
     [Binding]
     public class CallForProposalsSteps : SpecFlowTest

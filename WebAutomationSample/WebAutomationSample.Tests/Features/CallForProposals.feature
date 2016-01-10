@@ -4,25 +4,25 @@
 Scenario: Register with correct data
 	Given User navigates to 'Call for proposals' page
 	When User fills following fields on 'Call for proposals' page
-		| name         | value                | type       |
-		| title        | Presentation 1       |            |
-		| form         | lecture (25 minutes) | select     |
-		| speaker      | no                   | radio      |
-		| presented    | no                   | radio      |
-		| presentation | Presentation.txt     | file       |
-		| description  | 400                  | characters |
+		| name         | value                |
+		| title        | Presentation 1       |
+		| form         | lecture (25 minutes) |
+		| speaker      | no                   |
+		| presented    | no                   |
+		| presentation | Presentation.txt     |
+		| description  | 400                  |
 	And User clicks on 'Next step' button
 	And User fills following fields on 'Call for proposals' page
-		| name                | value          | type       |
-		| first name          | Mark           |            |
-		| surname             | Smith          |            |
-		| position            | QA             |            |
-		| company institution | FP             |            |
-		| email address       | test@test.test |            |
-		| phone number        | 123123123      |            |
-		| biography           | 400            | characters |
-		| photo               | Photo.png      | file       |
-		| agreement           | yes            | checkbox   |
-		| captcha             | 1234           |            |
+		| name                | value          |
+		| first name          | Mark           |
+		| surname             | Smith          |
+		| position            | QA             |
+		| company institution | FP             |
+		| biography           | 400            |
+		| email address       | test@test.test |
+		| phone number        | 123123123      |
+		| photo               | Photo.png      |
+		| agreement           | yes            |
+		| captcha             | 1234           |
 	And User clicks on submit button
 	Then User is successfully registered

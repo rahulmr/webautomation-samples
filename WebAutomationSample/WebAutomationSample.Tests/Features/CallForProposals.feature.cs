@@ -78,32 +78,25 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "name",
-                        "value",
-                        "type"});
+                        "value"});
             table1.AddRow(new string[] {
                         "title",
-                        "Presentation 1",
-                        ""});
+                        "Presentation 1"});
             table1.AddRow(new string[] {
                         "form",
-                        "lecture (25 minutes)",
-                        "select"});
+                        "lecture (25 minutes)"});
             table1.AddRow(new string[] {
                         "speaker",
-                        "no",
-                        "radio"});
+                        "no"});
             table1.AddRow(new string[] {
                         "presented",
-                        "no",
-                        "radio"});
+                        "no"});
             table1.AddRow(new string[] {
                         "presentation",
-                        "Presentation.txt",
-                        "file"});
+                        "Presentation.txt"});
             table1.AddRow(new string[] {
                         "description",
-                        "400",
-                        "characters"});
+                        "400"});
 #line 6
  testRunner.When("User fills following fields on \'Call for proposals\' page", ((string)(null)), table1, "When ");
 #line 14
@@ -111,48 +104,37 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "name",
-                        "value",
-                        "type"});
+                        "value"});
             table2.AddRow(new string[] {
                         "first name",
-                        "Mark",
-                        ""});
+                        "Mark"});
             table2.AddRow(new string[] {
                         "surname",
-                        "Smith",
-                        ""});
+                        "Smith"});
             table2.AddRow(new string[] {
                         "position",
-                        "QA",
-                        ""});
+                        "QA"});
             table2.AddRow(new string[] {
                         "company institution",
-                        "FP",
-                        ""});
-            table2.AddRow(new string[] {
-                        "email address",
-                        "test@test.test",
-                        ""});
-            table2.AddRow(new string[] {
-                        "phone number",
-                        "123123123",
-                        ""});
+                        "FP"});
             table2.AddRow(new string[] {
                         "biography",
-                        "400",
-                        "characters"});
+                        "400"});
+            table2.AddRow(new string[] {
+                        "email address",
+                        "test@test.test"});
+            table2.AddRow(new string[] {
+                        "phone number",
+                        "123123123"});
             table2.AddRow(new string[] {
                         "photo",
-                        "Photo.png",
-                        "file"});
+                        "Photo.png"});
             table2.AddRow(new string[] {
                         "agreement",
-                        "yes",
-                        "checkbox"});
+                        "yes"});
             table2.AddRow(new string[] {
                         "captcha",
-                        "1234",
-                        ""});
+                        "1234"});
 #line 15
  testRunner.And("User fills following fields on \'Call for proposals\' page", ((string)(null)), table2, "And ");
 #line 27

@@ -12,24 +12,24 @@
 
   <container name="CallForProposalsPage">
     <!-- Step 1 -->
-    <component name="Title" id ="input-temat" />
-    <component name="Description" id="text-abstrakt" />
-    <component name="Form" id="length" />
-    <component name="Speaker" pid="experience_{0}" />
-    <component name="Presented" pid="presented_{0}" />
-    <component name="Presentation" xpath="//a[@id='add-file']/preceding-sibling::div/input[@type='file']" />
+    <component name="Title" id ="input-temat" type="text" />
+    <component name="Description" id="text-abstrakt" type="characters" />
+    <component name="Form" id="length" type="select" />
+    <component name="Speaker" pid="experience_{0}" type="radio" />
+    <component name="Presented" pid="presented_{0}" type="radio" />
+    <component name="Presentation" xpath="//a[@id='add-file']/preceding-sibling::div/input[@type='file']" type="file" />
 
     <!-- Step 2 -->
-    <component name="FirstName" id="input-imie" />
-    <component name="Surname" id="input-nazwisko" />
-    <component name="Position" id="input-stanowisko" />
-    <component name="CompanyInstitution" id="input-firma" />
-    <component name="EmailAddress" id="input-email" />
-    <component name="PhoneNumber" id="input-phone" />
-    <component name="Biography" id="text-biografia" />
-    <component name="Photo" xpath="//a[@id='add-photo']/preceding-sibling::div/input[@type='file']" />
-    <component name="Agreement" id="checkbox-regulamin" />
-    <component name="Captcha" id="input-captcha" />
+    <component name="FirstName" id="input-imie" type="text" />
+    <component name="Surname" id="input-nazwisko" type="text" />
+    <component name="Position" id="input-stanowisko" type="text" />
+    <component name="CompanyInstitution" id="input-firma" type="text" />
+    <component name="EmailAddress" id="input-email" type="text" />
+    <component name="PhoneNumber" id="input-phone" type="text" />
+    <component name="Biography" id="text-biografia" type="characters" />
+    <component name="Photo" xpath="//a[@id='add-photo']/preceding-sibling::div/input[@type='file']" type="file" />
+    <component name="Agreement" id="checkbox-regulamin" type="checkbox" />
+    <component name="Captcha" id="input-captcha" type="text" />
   </container>
 
   <container name="HomePage">

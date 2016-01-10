@@ -15,8 +15,14 @@ namespace WebAutomationSample.Tests.Steps.Common
     /// For page-specific operations, you should create new steps that will use only strongly typed objects: "this.GetContainer<PageName>().ElementName"
     /// </summary>
     [Binding]
-    public class GenericSteps : SpecFlowTest
+    public class DataInsertionSteps : SpecFlowTest
     {
+        /// <summary>
+        /// Generic steps for filling fields.
+        /// Type of fields is retrieved by using custom attribute "Type"
+        /// </summary>
+        /// <param name="pageName">The name of page.</param>
+        /// <param name="table">List of fields to fill.</param>
         [When(@"User fills following fields on '(.*)' page")]
         public void WhenUserFillsFollowingFieldsOnPage(string pageName, Table table)
         {
@@ -25,13 +31,14 @@ namespace WebAutomationSample.Tests.Steps.Common
             foreach (var field in table.Rows)
             {
                 string webComponentName = field["name"].ToCamelCase();
-                string value = field["value"];
-                string type = string.IsNullOrEmpty(field["type"]) ? "text" : field["type"]; 
+                string value = field["value"]; 
 
                 // Get Web Component by reflection
                 var webComponent = this.GetWebComponent(webContainerName, webComponentName);
 
-                switch (type)
+                // Web Component has been found by reflection (it is not strongly typed)
+                // So to recognise its purpose, we added custom attribute "type" in the XML
+                switch (webComponent.Properties["type"])
                 {
                     case "text":
                         webComponent.Perform.Fill(value);
@@ -60,7 +67,7 @@ namespace WebAutomationSample.Tests.Steps.Common
                         break;
 
                     default:
-                        throw new ArgumentException("Incorrect type: " + type);
+                        throw new ArgumentException("Incorrect type: " + webComponent.Properties["type"]);
                 }
             }
         }

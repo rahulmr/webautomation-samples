@@ -17,6 +17,7 @@ namespace WebAutomationSample.Tests.Pages
 	using WebAutomation.Core.WebObjects.WebComponents.Attributes;
 	using WebAutomation.Core.WebObjects.WebContainer;
 	using WebAutomation.Core.WebObjects.WebContainer.Attributes;
+	using WebAutomationSample.Tests.Common.CustomAttributes;
 
 	[Name("QualityExcitesPage")]
 	public partial class QualityExcitesPage 
@@ -48,66 +49,82 @@ namespace WebAutomationSample.Tests.Pages
 	{
 		[Name("Title")]
 		[Id("input-temat")]
+		[Type("text")]
 		public IWebComponent Title { get; set; }
 
 		[Name("Description")]
 		[Id("text-abstrakt")]
+		[Type("characters")]
 		public IWebComponent Description { get; set; }
 
 		[Name("Form")]
 		[Id("length")]
+		[Type("select")]
 		public IWebComponent Form { get; set; }
 
 		[Name("Speaker")]
 		[Pid("experience_{0}")]
+		[Type("radio")]
 		public IWebComponent Speaker { get; set; }
 
 		[Name("Presented")]
 		[Pid("presented_{0}")]
+		[Type("radio")]
 		public IWebComponent Presented { get; set; }
 
 		[Name("Presentation")]
 		[Xpath("//a[@id='add-file']/preceding-sibling::div/input[@type='file']")]
+		[Type("file")]
 		public IWebComponent Presentation { get; set; }
 
 		[Name("FirstName")]
 		[Id("input-imie")]
+		[Type("text")]
 		public IWebComponent FirstName { get; set; }
 
 		[Name("Surname")]
 		[Id("input-nazwisko")]
+		[Type("text")]
 		public IWebComponent Surname { get; set; }
 
 		[Name("Position")]
 		[Id("input-stanowisko")]
+		[Type("text")]
 		public IWebComponent Position { get; set; }
 
 		[Name("CompanyInstitution")]
 		[Id("input-firma")]
+		[Type("text")]
 		public IWebComponent CompanyInstitution { get; set; }
 
 		[Name("EmailAddress")]
 		[Id("input-email")]
+		[Type("text")]
 		public IWebComponent EmailAddress { get; set; }
 
 		[Name("PhoneNumber")]
 		[Id("input-phone")]
+		[Type("text")]
 		public IWebComponent PhoneNumber { get; set; }
 
 		[Name("Biography")]
 		[Id("text-biografia")]
+		[Type("characters")]
 		public IWebComponent Biography { get; set; }
 
 		[Name("Photo")]
 		[Xpath("//a[@id='add-photo']/preceding-sibling::div/input[@type='file']")]
+		[Type("file")]
 		public IWebComponent Photo { get; set; }
 
 		[Name("Agreement")]
 		[Id("checkbox-regulamin")]
+		[Type("checkbox")]
 		public IWebComponent Agreement { get; set; }
 
 		[Name("Captcha")]
 		[Id("input-captcha")]
+		[Type("text")]
 		public IWebComponent Captcha { get; set; }
 
 	}

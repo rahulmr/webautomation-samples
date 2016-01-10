@@ -11,7 +11,7 @@
 // ======================================================
 string xmlFilename = "QualityExcites.xml";
 string desiredNamespace  = "WebAutomationSample.Tests.Pages";
-string customAttributesNamespace = string.Empty;
+string customAttributesNamespace = "WebAutomationSample.Tests.Common.CustomAttributes";
 // ======================================================
 #>
 

@@ -59,8 +59,9 @@
     <Reference Include="TechTalk.SpecFlow">
       <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
-    <Reference Include="WebAutomation.Core">
-      <HintPath>..\packages\WebAutomation.1.0.124\lib\net45\WebAutomation.Core.dll</HintPath>
+    <Reference Include="WebAutomation.Core, Version=1.0.132.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebAutomation.1.0.132\lib\net45\WebAutomation.Core.dll</HintPath>
     </Reference>
     <Reference Include="WebAutomation.SpecflowGenericSteps">
       <HintPath>..\packages\WebAutomation.SpecFlowGenericSteps.1.0.124\lib\net45\WebAutomation.SpecflowGenericSteps.dll</HintPath>
@@ -83,6 +84,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Common\CustomAttributes\TypeAttribute.cs" />
     <Compile Include="Common\Extensions\StringExtensions.cs" />
     <Compile Include="Common\Settings.cs" />
     <Compile Include="Common\SpecFlowTest.cs" />
@@ -103,12 +105,13 @@
       <DependentUpon>QualityExcites.tt</DependentUpon>
     </Compile>
     <Compile Include="SpecFlowGenericSteps.cs" />
-    <Compile Include="Steps\CallForProposalsSteps.cs" />
-    <Compile Include="Steps\Common\GenericSteps.cs" />
-    <Compile Include="Steps\Common\ScenarioSteps.cs" />
-    <Compile Include="Steps\NavigationSteps.cs" />
+    <Compile Include="Steps\Custom\CallForProposalsSteps.cs" />
+    <Compile Include="Steps\Generic\DataInsertionSteps.cs" />
+    <Compile Include="Steps\ScenarioSteps.cs" />
+    <Compile Include="Steps\Custom\NavigationSteps.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WebAutomation.Generator.dll" />
     <None Include="App.config" />
     <None Include="Features\AccessToPages.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -137,7 +140,6 @@
     <Content Include="Pages\QualityExcites.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="WebAutomation.Generator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
