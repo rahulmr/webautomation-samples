@@ -3,7 +3,7 @@
 namespace WebAutomationSample.Tests.Common.CustomAttributes
 {
     /// <summary>
-    /// Custom attribute: Type.
+    /// Type attribute.
     /// Can be used in generic steps, where we are finding WebComponent by reflection and we are not aware of its type.
     /// </summary>
     public class TypeAttribute : WebComponentAttribute

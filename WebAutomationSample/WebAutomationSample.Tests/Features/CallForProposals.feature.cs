@@ -144,6 +144,70 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Mandatory fields - step 1")]
+        [NUnit.Framework.CategoryAttribute("automated")]
+        public virtual void MandatoryFields_Step1()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Mandatory fields - step 1", new string[] {
+                        "automated"});
+#line 31
+this.ScenarioSetup(scenarioInfo);
+#line 32
+ testRunner.Given("User navigates to \'Call for proposals\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 33
+ testRunner.When("User clicks on \'Next step\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 34
+ testRunner.Then("All fields from step 1 are marked as invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Mandatory fields - step 2")]
+        [NUnit.Framework.CategoryAttribute("automated")]
+        public virtual void MandatoryFields_Step2()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Mandatory fields - step 2", new string[] {
+                        "automated"});
+#line 37
+this.ScenarioSetup(scenarioInfo);
+#line 38
+ testRunner.Given("User navigates to \'Call for proposals\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "name",
+                        "value"});
+            table3.AddRow(new string[] {
+                        "title",
+                        "Presentation 1"});
+            table3.AddRow(new string[] {
+                        "form",
+                        "lecture (25 minutes)"});
+            table3.AddRow(new string[] {
+                        "speaker",
+                        "no"});
+            table3.AddRow(new string[] {
+                        "presented",
+                        "no"});
+            table3.AddRow(new string[] {
+                        "presentation",
+                        "Presentation.txt"});
+            table3.AddRow(new string[] {
+                        "description",
+                        "400"});
+#line 39
+ testRunner.When("User fills following fields on \'Call for proposals\' page", ((string)(null)), table3, "When ");
+#line 47
+ testRunner.And("User clicks on \'Next step\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 48
+ testRunner.And("User clicks on submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 49
+ testRunner.Then("All fields from step 2 are marked as invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -9,17 +9,16 @@ using WebAutomationSample.Tests.Common.Extensions;
 namespace WebAutomationSample.Tests.Steps.Common
 {
     /// <summary>
-    /// Custom generic steps.
-    /// Here are steps that can be used on all pages.
+    /// Generic stps for filling fields.
     /// Components can be found (in XML) only by using reflection mechanism. 
-    /// For page-specific operations, you should create new steps that will use only strongly typed objects: "this.GetContainer<PageName>().ElementName"
+    /// For page-specific operations, you should rather create custom steps that will use only strongly typed objects: "this.GetContainer<PageName>().ElementName"
     /// </summary>
     [Binding]
     public class DataInsertionSteps : SpecFlowTest
     {
         /// <summary>
         /// Generic steps for filling fields.
-        /// Type of fields is retrieved by using custom attribute "Type"
+        /// Type of fields is retrieved by using custom attribute "type"
         /// </summary>
         /// <param name="pageName">The name of page.</param>
         /// <param name="table">List of fields to fill.</param>
@@ -63,7 +62,7 @@ namespace WebAutomationSample.Tests.Steps.Common
                         break;
 
                     case "checkbox":
-                        webComponent.Perform.Click();
+                        webComponent.Perform.Check();
                         break;
 
                     default:
