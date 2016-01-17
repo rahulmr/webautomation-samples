@@ -10,14 +10,14 @@
 #region Designer generated code
 #pragma warning disable
 
-namespace WebAutomationSample.Tests.Pages
+namespace QualityExcites.Tests.Pages
 {
 	using WebAutomation.Core.WebObjects.Common.Attributes;
 	using WebAutomation.Core.WebObjects.WebComponents;
 	using WebAutomation.Core.WebObjects.WebComponents.Attributes;
 	using WebAutomation.Core.WebObjects.WebContainer;
 	using WebAutomation.Core.WebObjects.WebContainer.Attributes;
-	using WebAutomationSample.Tests.Common.CustomAttributes;
+	using QualityExcites.Tests.Common.CustomAttributes;
 
 	[Name("QualityExcitesPage")]
 	public partial class QualityExcitesPage 

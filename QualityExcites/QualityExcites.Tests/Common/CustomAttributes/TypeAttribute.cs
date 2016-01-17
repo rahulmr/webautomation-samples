@@ -1,6 +1,6 @@
 ﻿using WebAutomation.Core.WebObjects.WebComponents.Attributes;
 
-namespace WebAutomationSample.Tests.Common.CustomAttributes
+namespace QualityExcites.Tests.Common.CustomAttributes
 {
     /// <summary>
     /// Type attribute.

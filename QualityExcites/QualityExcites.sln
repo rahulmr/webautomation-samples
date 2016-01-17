@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAutomationSample.Tests", "WebAutomationSample.Tests\WebAutomationSample.Tests.csproj", "{81C13E76-2BCC-423D-8CEB-F967B4CB8BEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QualityExcites.Tests", "QualityExcites.Tests\QualityExcites.Tests.csproj", "{81C13E76-2BCC-423D-8CEB-F967B4CB8BEE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{464A69A0-79C2-467A-B24B-2F97E10FE7C7}"
 	ProjectSection(SolutionItems) = preProject

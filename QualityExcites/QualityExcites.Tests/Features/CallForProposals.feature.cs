@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace WebAutomationSample.Tests.Features
+namespace QualityExcites.Tests.Features
 {
     using TechTalk.SpecFlow;
     

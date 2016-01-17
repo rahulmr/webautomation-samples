@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace WebAutomationSample.Tests.Common.Extensions
+namespace QualityExcites.Tests.Common.Extensions
 {
     public static class StringExtensions
     {

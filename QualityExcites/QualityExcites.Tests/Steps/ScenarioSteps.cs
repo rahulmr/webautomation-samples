@@ -1,7 +1,7 @@
 ﻿using TechTalk.SpecFlow;
-using WebAutomationSample.Tests.Common;
+using QualityExcites.Tests.Common;
 
-namespace WebAutomationSample.Tests.Steps
+namespace QualityExcites.Tests.Steps
 {
     [Binding]
     public class ScenarioSteps : SpecFlowTest

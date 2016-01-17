@@ -10,8 +10,8 @@
 // * [Optional] The namespace which should be included in case of using custom attributes.
 // ======================================================
 string xmlFilename = "QualityExcites.xml";
-string desiredNamespace  = "WebAutomationSample.Tests.Pages";
-string customAttributesNamespace = "WebAutomationSample.Tests.Common.CustomAttributes";
+string desiredNamespace  = "QualityExcites.Tests.Pages";
+string customAttributesNamespace = "QualityExcites.Tests.Common.CustomAttributes";
 // ======================================================
 #>
 

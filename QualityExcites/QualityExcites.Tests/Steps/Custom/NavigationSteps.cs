@@ -1,10 +1,10 @@
 ﻿using System.Threading;
 using TechTalk.SpecFlow;
 using WebAutomation.Core.WebObjects.WebComponents.Actions;
-using WebAutomationSample.Tests.Common;
-using WebAutomationSample.Tests.Pages;
+using QualityExcites.Tests.Common;
+using QualityExcites.Tests.Pages;
 
-namespace WebAutomationSample.Tests.Steps
+namespace QualityExcites.Tests.Steps
 {
     [Binding]
     public class NavigationSteps : SpecFlowTest
@@ -44,13 +44,6 @@ namespace WebAutomationSample.Tests.Steps
         public void WhenUserClicksOnButton(string buttonName)
         {
             this.Page.ButtonByText.With(buttonName).Perform.Click();
-
-            // After clicking on the button, the page is being scrolled to other place.
-            // In that time, we are not able to operate on other elements (selenium exception will occur).
-            // To avoid that problem, we have to determine when the scrolling ends.
-
-            // Temporary solution (should be replaced in the future!)
-            Thread.Sleep(1000);
         }
     }
 }

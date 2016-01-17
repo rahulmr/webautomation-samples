@@ -1,10 +1,10 @@
 ﻿using TechTalk.SpecFlow;
 using WebAutomation.Core.WebObjects.WebComponents;
 using WebAutomation.Core.WebObjects.WebComponents.Value;
-using WebAutomationSample.Tests.Common;
-using WebAutomationSample.Tests.Pages;
+using QualityExcites.Tests.Common;
+using QualityExcites.Tests.Pages;
 
-namespace WebAutomationSample.Tests.Steps.Custom
+namespace QualityExcites.Tests.Steps.Custom
 {
     [Binding]
     public class CallForProposalsSteps : SpecFlowTest
@@ -37,7 +37,6 @@ namespace WebAutomationSample.Tests.Steps.Custom
                     {
                         this.Page.Title,
                         this.Page.Description,
-                        //this.Page.Form,
                         this.Page.Speaker.With("yes"),
                         this.Page.Presented.With("yes")
                     }

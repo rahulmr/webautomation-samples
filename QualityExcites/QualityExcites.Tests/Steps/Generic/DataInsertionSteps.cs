@@ -3,10 +3,10 @@ using System.IO;
 using TechTalk.SpecFlow;
 using WebAutomation.Core;
 using WebAutomation.Core.WebObjects.WebComponents.Actions;
-using WebAutomationSample.Tests.Common;
-using WebAutomationSample.Tests.Common.Extensions;
+using QualityExcites.Tests.Common;
+using QualityExcites.Tests.Common.Extensions;
 
-namespace WebAutomationSample.Tests.Steps.Common
+namespace QualityExcites.Tests.Steps.Common
 {
     /// <summary>
     /// Generic stps for filling fields.

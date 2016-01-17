@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace WebAutomationSample.Tests.Common
+namespace QualityExcites.Tests.Common
 {
     public class Settings
     {

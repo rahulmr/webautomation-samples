@@ -3,7 +3,7 @@ using System;
 using WebAutomation.SpecflowGenericSteps;
 using System.Configuration;
 
-namespace WebAutomationSample.Tests.Common
+namespace QualityExcites.Tests.Common
 {
     public class SpecFlowTest : SpecFlowTestBase
     {
