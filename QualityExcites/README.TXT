@@ -1,2 +1,7 @@
-Sample tests for Quality Excites (https://qualityexcites.pl)
-using the WebAutomation + SpecFlow
+Sample test project for Quality Excites (https://qualityexcites.pl)
+
+Packages:
+- Selenium
+- WebAutomation
+- WebAutomation.GenericSteps 
+- SpecFlow

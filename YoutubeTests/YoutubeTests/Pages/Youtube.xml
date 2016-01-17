@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<container name="YoutubePage">
+  <component name="SearchInput" id="masthead-search-term" assertPresent="" />
+  <component name="OkButton" xpath="//*[@id='search-btn']/span" />
+
+  <container name="YoutubeSearchResultPage">
+    <component name="Link" pxpath="//a[@title='{0}']" />
+  </container>
+
+  <container name="YoutubePlayerPage">
+    <component name="Player" id="player-api" />
+  </container>
+
+</container>
