@@ -1,14 +1,11 @@
-Repository contains sample projects that use WebAutomation framework.
+Repository contains sample projects which use WebAutomation framework.
 
 YoutubeTests
-- WebAutomation
+- Simple tests for youtube using the WebAutomation framework.
 
 YoutubeTests.PredefinedSteps
-- WebAutomation
-- WebAutomation.GenericSteps (use only predefined steps)
-- SpecFlow
+- SpecFlow tests using only predefined steps from WebAutomation.GenericSteps.
 
 QualityExcites:
-- WebAutomation
-- WebAutomation.GenericSteps (without using predefined steps)
-- SpecFlow
+- Sample test project for Quality Excites (https://qualityexcites.pl)
+- SpecFlow + WebAutomation
