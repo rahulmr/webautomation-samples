@@ -23,7 +23,6 @@ namespace WebAutomation.SpecflowGenericSteps
 {
     using System.Collections.Generic;
     using System.Linq;
-    using System.Reflection;
     using TechTalk.SpecFlow;
     using WebAutomation.Core.WebObjects.WebComponents.Actions;
     using WebAutomation.Core.WebObjects.WebComponents.Value;
@@ -258,6 +257,78 @@ namespace WebAutomation.SpecflowGenericSteps
             foreach (var row in parameters.Rows)
             {
                 this.GetWebComponent(webContainerName, webComponentName).With(row.Values.ToArray()).PerformIfExists.Click(ClickType.Script);
+            }
+        }
+
+        #endregion
+
+        #region Click right button
+
+        [When(@"user clicks right button on '(.+)-(.+)'")]
+        public void ActionClickRight(string webContainerName, string webComponentName)
+        {
+            this.GetWebComponent(webContainerName, webComponentName).Perform.Click(ClickType.Right);
+        }
+
+        [When(@"user clicks right button on '(.+)-(.+)'")]
+        public void ActionClickRight(string webContainerName, string webComponentName, Table parameters)
+        {
+            foreach (var row in parameters.Rows)
+            {
+                this.GetWebComponent(webContainerName, webComponentName).With(row.Values.ToArray()).Perform.Click(ClickType.Right);
+            }
+        }
+
+        [When(@"user clicks right button on '(.+)-(.+)' if exists")]
+        public void ActionClickRightfExists(string webContainerName, string webComponentName)
+        {
+            this.GetWebComponent(webContainerName, webComponentName).PerformIfExists.Click(ClickType.Right);
+        }
+
+        [When(@"user clicks right button on '(.+)-(.+)' if exists")]
+        public void ActionClickRightIfExists(string webContainerName, string webComponentName, Table parameters)
+        {
+            foreach (var row in parameters.Rows)
+            {
+                this.GetWebComponent(webContainerName, webComponentName).With(row.Values.ToArray()).PerformIfExists.Click(ClickType.Right);
+            }
+        }
+
+        #endregion
+
+        #region Drag And Drop
+
+        [When(@"user D&D '(.+)-(.+)' to '(.+)-(.+)'")]
+        public void ActionDragAndDrop(string webContainerName, string webComponentName, string targetWebContainerName, string targetWebComponentName)
+        {
+            var targetWebComponent = this.GetWebComponent(targetWebContainerName, targetWebComponentName);
+            this.GetWebComponent(webContainerName, webComponentName).Perform.DragAndDrop(targetWebComponent);
+        }
+
+        [When(@"user D&D '(.+)-(.+)' to '(.+)-(.+)'")]
+        public void ActionDragAndDrop(string webContainerName, string webComponentName, string targetWebContainerName, string targetWebComponentName, Table parameters)
+        {
+            foreach (var row in parameters.Rows)
+            {
+                var targetWebComponent = this.GetWebComponent(targetWebContainerName, targetWebComponentName);
+                this.GetWebComponent(webContainerName, webComponentName).With(row.Values.ToArray()).Perform.DragAndDrop(targetWebComponent);
+            }
+        }
+
+        [When(@"user D&D '(.+)-(.+)' to '(.+)-(.+)' if exists")]
+        public void ActionDragAndDropfExists(string webContainerName, string webComponentName, string targetWebContainerName, string targetWebComponentName)
+        {
+            var targetWebComponent = this.GetWebComponent(targetWebContainerName, targetWebComponentName);
+            this.GetWebComponent(webContainerName, webComponentName).PerformIfExists.DragAndDrop(targetWebComponent);
+        }
+
+        [When(@"user D&D '(.+)-(.+)' to '(.+)-(.+)' if exists")]
+        public void ActionDragAndDropIfExists(string webContainerName, string webComponentName, string targetWebContainerName, string targetWebComponentName, Table parameters)
+        {
+            foreach (var row in parameters.Rows)
+            {
+                var targetWebComponent = this.GetWebComponent(targetWebContainerName, targetWebComponentName);
+                this.GetWebComponent(webContainerName, webComponentName).With(row.Values.ToArray()).PerformIfExists.DragAndDrop(targetWebComponent);
             }
         }
 

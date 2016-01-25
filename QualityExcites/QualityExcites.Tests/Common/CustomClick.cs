@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using OpenQA.Selenium;
 using WebAutomation.Core.WebObjects.WebComponents.Actions;
+using WebAutomation.Core;
 
 namespace QualityExcites.Tests.Common
 {
@@ -9,9 +10,9 @@ namespace QualityExcites.Tests.Common
         protected IClickAction DefaultClick { get; set; }
         protected IWebDriver WebDriver { get; set; }
 
-        public CustomClick()
+        public CustomClick(ISettings settingss)
         {
-            this.DefaultClick = new ClickAction();
+            this.DefaultClick = new ClickAction(settingss);
         }
 
         public bool Click(ClickType clickType = ClickType.Mouse)

@@ -37,6 +37,7 @@ namespace QualityExcites.Tests.Steps.Custom
                     {
                         this.Page.Title,
                         this.Page.Description,
+                        this.Page.Form,
                         this.Page.Speaker.With("yes"),
                         this.Page.Presented.With("yes")
                     }
