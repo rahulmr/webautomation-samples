@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
+<!-- Current state
+"My website" consists of three pages: Home, Login and News.
+Each page contains the menu and the content specific only for that page.
+The structure is simple, but this will be hard to maintain in the future.
+-->
+
+<!-- Suggestions
+Based on the fact, that the same menu occurs on each page, we can move it to the parent container "MyWebSite".
+The menu will be defined only once and will be still available for the pages (through inheritance)!
+See correction in the Approach 1.
+-->
+
 <container name="MyWebsite">
   
   <container name="HomePage">
-    <!-- Wrong - duplicating components that are available on all pages (corrected in approach 1) -->
+    <!-- Wrong - duplicated components (corrected in approach 1) -->
     <component name="MenuHomeButton" xpath="//ul[@id='menu']/li/a[text()='Home']" />
     <component name="MenuNewsButton" xpath="//ul[@id='menu']/li/a[text()='News']" />
     <component name="MenuLoginButton" xpath="//ul[@id='menu']/li/a[text()='Login']" />
   </container>
   
   <container name="LoginPage">
-    <!-- Wrong - duplicating components that are available on all pages (corrected in approach 1) -->
+    <!-- Wrong - duplicated components (corrected in approach 1) -->
     <component name="MenuHomeButton" xpath="//ul[@id='menu']/li/a[text()='Home']" />
     <component name="MenuNewsButton" xpath="//ul[@id='menu']/li/a[text()='News']" />
     <component name="MenuLoginButton" xpath="//ul[@id='menu']/li/a[text()='Login']" />
@@ -24,7 +36,7 @@
   </container>
 
   <container name="NewsPage">
-    <!-- Wrong - duplicating components that are available on all pages (corrected in approach 1) -->
+    <!-- Wrong - duplicated components (corrected in approach 1) -->
     <component name="MenuHomeButton" xpath="//ul[@id='menu']/li/a[text()='Home']" />
     <component name="MenuNewsButton" xpath="//ul[@id='menu']/li/a[text()='News']" />
     <component name="MenuLoginButton" xpath="//ul[@id='menu']/li/a[text()='Login']" />

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
+<!-- Current state
+By using parameterized attributes, we avoided hardcoding of test values in the XML! :)
+-->
+
+<!-- Suggestions
+What else can we achieve by using parameters inside our attributes? 
+We can simplify the test, by moving some logic from the C# code to xpath expression.
+
+For example (Approach 2_2): 
+- checking whether an element contains a given text is in most cases equivalent to checking whether element is displayed when searching by xpath with text.
+-->
+
 <container name="MyWebsite">
-  <!-- Similar values of attributes can be extracted to parent component (corrected in approach 3) -->
   <component name="MenuHomeButton" xpath="//ul[@id='menu']/li/a[text()='Home']" />
   <component name="MenuNewsButton" xpath="//ul[@id='menu']/li/a[text()='News']" />
   <component name="MenuLoginButton" xpath="//ul[@id='menu']/li/a[text()='Login']" />
@@ -17,7 +28,6 @@
   </container>
 
   <container name="NewsPage">
-    <!-- Similar values of attributes can be extracted to parent component (corrected in approach 3) -->
     <component name="TableRowId" pxpath="//table/tbody/tr[{0}]/td[1]" />
     <component name="TableRowTitle" pxpath="//table/tbody/tr[{0}]/td[2]" />
     <component name="TableRowContent" pxpath="//table/tbody/tr[{0}]/td[3]/div" />

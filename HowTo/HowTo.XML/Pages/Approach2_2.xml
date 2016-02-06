@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
+<!-- Current state
+In this approach, we added the component by which you can validate the presence of entire row with only one operation in C# test! :)
+If you want to write less code in the test logic - this approach is for you.
+However the bad side of this approach is that in case of negative test result, you will not exactly know where was the problem (in which column the text was different).
+-->
+
+<!-- Suggestions
+What else can we improve in the XML below? hmm..
+We can notice, that some components have attributes with similar values at the beginning. So when something will change, you will have to update all places - which is not good.
+
+WebAutomation frameworks allows you to place one component inside another component!
+As a result, the generated code will produce two components, where the sub component will have all attributes from the parent component combined with its own attributes.
+See approach 3.
+-->
+
 <container name="MyWebsite">
   <!-- Similar values of attributes can be extracted to parent component (corrected in approach 3) -->
   <component name="MenuHomeButton" xpath="//ul[@id='menu']/li/a[text()='Home']" />

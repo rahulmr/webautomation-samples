@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
+<!-- Current state
+We moved the menu to the root container "MyWebsite", so we don't have to duplicate it on each page! :)
+
+However, there is another thing to consider - the matter of dynamic content.
+- Login page -  the messages are hardcoded in xpath,
+- News page - components for table are defined only for the first and the second row. 
+
+This brings some important questions:
+- What if the login message will be changed or there will be another case with different message?
+- What if there will be more than two rows in the table? 
+-->
+
+<!-- Suggestions
+Should we add or update components for that? ...no. So how to deal with dynamic content? The answer is "parameterized attributes". 
+WebAutomation framework provides attributes in which you can inject values from the test in runtime: 'pxpath', 'pid', 'pclass', etc.
+Simply use following placeholders in the place where the value should be injected, foe example: pxpath="{0} some text {1}"
+{0} - first parameter 
+{1} - second parameter
+{n} - n parameter
+
+and then invoke With() method on IWebComponent from test code.
+
+So the conclusion is that we shouldn't hardcoding values, which can change:
+- based on the business logic of our application
+- based on the the current content of database
+
+These values should be stored in the test logic (and not in XML).
+See correction in the Approach 2_1.
+-->
+
 <container name="MyWebsite">
   
   <component name="MenuHomeButton" xpath="//ul[@id='menu']/li/a[text()='Home']" />

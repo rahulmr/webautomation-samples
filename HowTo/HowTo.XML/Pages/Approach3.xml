@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
+<!-- Current state
+In this approach, we simplify the XML by creating parent component for the menu and table.
+The test logic (C#) remains unchanged, but the XML is now much more readable! :)
+-->
+
+<!-- Do you have any other suggestion how to improve XML?  ;)
+-->
+
 <container name="MyWebsite">
   
   <component name="Menu" xpath="//ul[@id='menu']">
