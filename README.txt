@@ -1,7 +1,7 @@
 Repository contains sample projects which use WebAutomation framework.
 
 HowTo:
-- HowTo.XML - demonstrated how to define correct XML for WebAutomation.
+- HowTo.XML - demonstrates how to create the correct XML for WebAutomation.
 
 QualityExcites:
 - Sample test project for Quality Excites (https://qualityexcites.pl)
