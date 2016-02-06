@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<container name="MyWebsite">
+  
+  <component name="MenuHomeButton" xpath="//ul[@id='menu']/li/a[text()='Home']" />
+  <component name="MenuNewsButton" xpath="//ul[@id='menu']/li/a[text()='News']" />
+  <component name="MenuLoginButton" xpath="//ul[@id='menu']/li/a[text()='Login']" />
+
+  <container name="HomePage">
+  </container>
+  
+  <container name="LoginPage">
+    <component name="UserTextbox" id="user" />
+    <component name="PasswordTextbox" id="password" />
+    <component name="LoginButton" id="login" />
+
+    <!-- Wrong - messages hardcoded in xpath (corrected in approach 2_1). -->
+    <component name="ErrorMessage" xpath="//span[@id='message'][text()='Incorrect password!']" />
+    <component name="SuccessMessage" xpath="//span[@id='message'][text()='Your are logged!']" />
+  </container>
+
+  <container name="NewsPage">
+    <!-- Wrong - incorrect way of defining components for dynamic content (corrected in approach 2_1) -->
+    <component name="TableRow1Id" xpath="//table/tbody/tr[1]/td[1]" />
+    <component name="TableRow1Title" xpath="//table/tbody/tr[1]/td[2]" />
+    <component name="TableRow1Content" xpath="//table/tbody/tr[1]/td[3]/div" />
+
+    <component name="TableRow2Id" xpath="//table/tbody/tr[2]/td[1]" />
+    <component name="TableRow2Title" xpath="//table/tbody/tr[2]/td[2]" />
+    <component name="TableRow2Content" xpath="//table/tbody/tr[2]/td[3]/div" />
+  </container>
+  
+</container>

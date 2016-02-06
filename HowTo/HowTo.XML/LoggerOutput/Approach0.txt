@@ -1,0 +1,156 @@
+﻿[Info] Start test: Approach0_LoginPage_Error
+[Debug] Load the Web Container
+	> Name : LoginPage
+
+[Info] Click the element
+	> Type   : Mouse
+	> Result : True
+	> Name       : LoginPage.MenuLoginButton
+	> Search by  : xpath
+	> Expression : //ul[@id='menu']/li/a[text()='Login']
+
+[Info] Fill the element with given text
+	> Type   : ReplaceText
+	> Text   : Admin
+	> Result : True
+	> Name       : LoginPage.UserTextbox
+	> Search by  : id
+	> Expression : user
+
+[Info] Fill the element with given text
+	> Type   : ReplaceText
+	> Text   : wrong_pass
+	> Result : True
+	> Name       : LoginPage.PasswordTextbox
+	> Search by  : id
+	> Expression : password
+
+[Info] Click the element
+	> Type   : Mouse
+	> Result : True
+	> Name       : LoginPage.LoginButton
+	> Search by  : id
+	> Expression : login
+
+[Info] Verify whether the element is displayed
+	> Result : True
+	> Name       : LoginPage.ErrorMessage
+	> Search by  : xpath
+	> Expression : //span[@id='message'][text()='Incorrect password!']
+
+[Info] Quit browser
+[Info] Test result: Passed
+[Info] ================================
+
+[Info] Start test: Approach0_LoginPage_Success
+[Debug] Load the Web Container
+	> Name : LoginPage
+
+[Info] Click the element
+	> Type   : Mouse
+	> Result : True
+	> Name       : LoginPage.MenuLoginButton
+	> Search by  : xpath
+	> Expression : //ul[@id='menu']/li/a[text()='Login']
+
+[Info] Fill the element with given text
+	> Type   : ReplaceText
+	> Text   : Admin
+	> Result : True
+	> Name       : LoginPage.UserTextbox
+	> Search by  : id
+	> Expression : user
+
+[Info] Fill the element with given text
+	> Type   : ReplaceText
+	> Text   : pass
+	> Result : True
+	> Name       : LoginPage.PasswordTextbox
+	> Search by  : id
+	> Expression : password
+
+[Info] Click the element
+	> Type   : Mouse
+	> Result : True
+	> Name       : LoginPage.LoginButton
+	> Search by  : id
+	> Expression : login
+
+[Info] Verify whether the element is displayed
+	> Result : True
+	> Name       : LoginPage.SuccessMessage
+	> Search by  : xpath
+	> Expression : //span[@id='message'][text()='Your are logged!']
+
+[Info] Quit browser
+[Info] Test result: Passed
+[Info] ================================
+
+[Info] Start test: Approach0_NewsPage
+[Debug] Load the Web Container
+	> Name : NewsPage
+
+[Info] Click the element
+	> Type   : Mouse
+	> Result : True
+	> Name       : NewsPage.MenuNewsButton
+	> Search by  : xpath
+	> Expression : //ul[@id='menu']/li/a[text()='News']
+
+[Info] Verify whether the element has text
+	> Type     : Equals
+	> Expected : ID 1
+	> Actual   : ID 1
+	> Result   : True
+	> Name       : NewsPage.TableRow1Id
+	> Search by  : xpath
+	> Expression : //table/tbody/tr[1]/td[1]
+
+[Info] Verify whether the element has text
+	> Type     : Equals
+	> Expected : First article
+	> Actual   : First article
+	> Result   : True
+	> Name       : NewsPage.TableRow1Title
+	> Search by  : xpath
+	> Expression : //table/tbody/tr[1]/td[2]
+
+[Info] Verify whether the element has text
+	> Type     : Contains
+	> Expected : Article 1 content
+	> Actual   : Article 1 content. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+	> Result   : True
+	> Name       : NewsPage.TableRow1Content
+	> Search by  : xpath
+	> Expression : //table/tbody/tr[1]/td[3]/div
+
+[Info] Verify whether the element has text
+	> Type     : Equals
+	> Expected : ID 2
+	> Actual   : ID 2
+	> Result   : True
+	> Name       : NewsPage.TableRow2Id
+	> Search by  : xpath
+	> Expression : //table/tbody/tr[2]/td[1]
+
+[Info] Verify whether the element has text
+	> Type     : Equals
+	> Expected : Second article
+	> Actual   : Second article
+	> Result   : True
+	> Name       : NewsPage.TableRow2Title
+	> Search by  : xpath
+	> Expression : //table/tbody/tr[2]/td[2]
+
+[Info] Verify whether the element has text
+	> Type     : Contains
+	> Expected : Article 2 content
+	> Actual   : Article 2 content. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+	> Result   : True
+	> Name       : NewsPage.TableRow2Content
+	> Search by  : xpath
+	> Expression : //table/tbody/tr[2]/td[3]/div
+
+[Info] Quit browser
+[Info] Test result: Passed
+[Info] ================================

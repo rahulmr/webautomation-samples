@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<container name="MyWebsite">
+  <!-- Similar values of attributes can be extracted to parent component (corrected in approach 3) -->
+  <component name="MenuHomeButton" xpath="//ul[@id='menu']/li/a[text()='Home']" />
+  <component name="MenuNewsButton" xpath="//ul[@id='menu']/li/a[text()='News']" />
+  <component name="MenuLoginButton" xpath="//ul[@id='menu']/li/a[text()='Login']" />
+
+  <container name="HomePage">
+  </container>
+
+  <container name="LoginPage">
+    <component name="UserTextbox" id="user" />
+    <component name="PasswordTextbox" id="password" />
+    <component name="LoginButton" id="login" />
+    <component name="Message" id="message" />
+  </container>
+
+  <container name="NewsPage">
+    <!-- Similar values of attributes can be extracted to parent component (corrected in approach 3) -->
+    <component name="TableRowByValues" pxpath="//table/tbody/tr[{0}][./td[1][text()='{1}']][./td[2][text()='{2}']][./td[3]/div[contains(text(), '{3}')]]" />
+    <component name="TableRowId" pxpath="//table/tbody/tr[{0}]/td[1]" />
+    <component name="TableRowTitle" pxpath="//table/tbody/tr[{0}]/td[2]" />
+    <component name="TableRowContent" pxpath="//table/tbody/tr[{0}]/td[3]/div" />
+  </container>
+  
+</container>

@@ -1,0 +1,143 @@
+﻿[Info] Start test: Approach3_LoginPage("Admin","wrong_pass","Incorrect password!")
+[Debug] Load the Web Container
+	> Name : MyWebsite
+
+[Info] Click the element
+	> Type   : Mouse
+	> Result : True
+	> Name       : MyWebsite.MenuLoginButton
+	> Search by  : xpath
+	> Expression : //ul[@id='menu']/li/a[text()='Login']
+
+[Debug] Load the Web Container
+	> Name : LoginPage
+
+[Info] Fill the element with given text
+	> Type   : ReplaceText
+	> Text   : Admin
+	> Result : True
+	> Name       : LoginPage.UserTextbox
+	> Search by  : id
+	> Expression : user
+
+[Info] Fill the element with given text
+	> Type   : ReplaceText
+	> Text   : wrong_pass
+	> Result : True
+	> Name       : LoginPage.PasswordTextbox
+	> Search by  : id
+	> Expression : password
+
+[Info] Click the element
+	> Type   : Mouse
+	> Result : True
+	> Name       : LoginPage.LoginButton
+	> Search by  : id
+	> Expression : login
+
+[Info] Verify whether the element is displayed
+	> Result : True
+	> Name       : LoginPage.Message
+	> Search by  : id
+	> Expression : message
+
+[Info] Verify whether the element has text
+	> Type     : Equals
+	> Expected : Incorrect password!
+	> Actual   : Incorrect password!
+	> Result   : True
+	> Name       : LoginPage.Message
+	> Search by  : id
+	> Expression : message
+
+[Info] Quit browser
+[Info] Test result: Passed
+[Info] ================================
+
+[Info] Start test: Approach3_LoginPage("Admin","pass","Your are logged!")
+[Debug] Load the Web Container
+	> Name : MyWebsite
+
+[Info] Click the element
+	> Type   : Mouse
+	> Result : True
+	> Name       : MyWebsite.MenuLoginButton
+	> Search by  : xpath
+	> Expression : //ul[@id='menu']/li/a[text()='Login']
+
+[Debug] Load the Web Container
+	> Name : LoginPage
+
+[Info] Fill the element with given text
+	> Type   : ReplaceText
+	> Text   : Admin
+	> Result : True
+	> Name       : LoginPage.UserTextbox
+	> Search by  : id
+	> Expression : user
+
+[Info] Fill the element with given text
+	> Type   : ReplaceText
+	> Text   : pass
+	> Result : True
+	> Name       : LoginPage.PasswordTextbox
+	> Search by  : id
+	> Expression : password
+
+[Info] Click the element
+	> Type   : Mouse
+	> Result : True
+	> Name       : LoginPage.LoginButton
+	> Search by  : id
+	> Expression : login
+
+[Info] Verify whether the element is displayed
+	> Result : True
+	> Name       : LoginPage.Message
+	> Search by  : id
+	> Expression : message
+
+[Info] Verify whether the element has text
+	> Type     : Equals
+	> Expected : Your are logged!
+	> Actual   : Your are logged!
+	> Result   : True
+	> Name       : LoginPage.Message
+	> Search by  : id
+	> Expression : message
+
+[Info] Quit browser
+[Info] Test result: Passed
+[Info] ================================
+
+[Info] Start test: Approach3_NewsPage
+[Debug] Load the Web Container
+	> Name : MyWebsite
+
+[Info] Click the element
+	> Type   : Mouse
+	> Result : True
+	> Name       : MyWebsite.MenuNewsButton
+	> Search by  : xpath
+	> Expression : //ul[@id='menu']/li/a[text()='News']
+
+[Debug] Load the Web Container
+	> Name : NewsPage
+
+[Info] Verify whether the element is displayed
+	> Result : True
+	> Name       : NewsPage.TableRowByValues
+	> Search by  : parameterized xpath
+	> Parameters : '1', 'ID 1', 'First article', 'Article 1 content'
+	> Expression : //table/tbody/tr[1][./td[1][text()='ID 1']][./td[2][text()='First article']][./td[3]/div[contains(text(), 'Article 1 content')]]
+
+[Info] Verify whether the element is displayed
+	> Result : True
+	> Name       : NewsPage.TableRowByValues
+	> Search by  : parameterized xpath
+	> Parameters : '2', 'ID 2', 'Second article', 'Article 2 content'
+	> Expression : //table/tbody/tr[2][./td[1][text()='ID 2']][./td[2][text()='Second article']][./td[3]/div[contains(text(), 'Article 2 content')]]
+
+[Info] Quit browser
+[Info] Test result: Passed
+[Info] ================================

@@ -1,0 +1,18 @@
+<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="$(ProjectDir)WebAutomation.Generator.dll" #>
+<#@ import namespace="WebAutomation.Generator" #>
+
+<#
+// Update following variables
+// * Name of XML file describing the tested websites (placed in the same folder)
+// * The namespace in which the generated C# classes should be placed
+// * [Optional] The namespace which should be included in case of using custom attributes.
+// ======================================================
+string xmlFilename = "Approach0.xml";
+string desiredNamespace  = "HowTo.XML.Pages.Approach0";
+string customAttributesNamespace = string.Empty;
+// ======================================================
+#>
+
+<#=WebObjectsGenerator.Generate(Host.ResolvePath(xmlFilename), desiredNamespace, customAttributesNamespace)#>

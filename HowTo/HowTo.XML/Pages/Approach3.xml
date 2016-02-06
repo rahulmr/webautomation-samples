@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<container name="MyWebsite">
+  
+  <component name="Menu" xpath="//ul[@id='menu']">
+    <component name="HomeButton" xpath="/li/a[text()='Home']" />
+    <component name="NewsButton" xpath="/li/a[text()='News']" />
+    <component name="LoginButton" xpath="/li/a[text()='Login']" />
+  </component>
+
+  <container name="HomePage">
+  </container>
+
+  <container name="LoginPage">
+    <component name="UserTextbox" id="user" />
+    <component name="PasswordTextbox" id="password" />
+    <component name="LoginButton" id="login" />
+    <component name="Message" id="message" />
+  </container>
+
+  <container name="NewsPage">
+    <component name="TableRow" pxpath="//table/tbody/tr[{0}]">
+      <component name="ByValues" pxpath="[./td[1][text()='{1}']][./td[2][text()='{2}']][./td[3]/div[contains(text(), '{3}')]]" />
+      <component name="Id" pxpath="/td[1]" />
+      <component name="Title" pxpath="/td[2]" />
+      <component name="Content" pxpath="/td[3]/div" />
+    </component>
+  </container>
+  
+</container>
