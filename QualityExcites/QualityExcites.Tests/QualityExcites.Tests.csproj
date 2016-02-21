@@ -68,7 +68,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WebAutomation.1.0.160\lib\net45\WebAutomation.Core.dll</HintPath>
     </Reference>
-    <Reference Include="WebAutomation.SpecFlow">
+    <Reference Include="WebAutomation.SpecFlow, Version=1.0.160.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WebAutomation.SpecFlow.1.0.160\lib\net45\WebAutomation.SpecFlow.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver, Version=2.52.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -140,7 +141,6 @@
     </Content>
     <Content Include="WebAutomation.Core.Unity.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
