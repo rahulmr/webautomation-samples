@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium.Firefox;
 using TechTalk.SpecFlow;
+using WebAutomation.SpecFlow;
 using WebAutomation.SpecflowGenericSteps;
 
 namespace YoutubeTests.PredefinedSteps.Steps

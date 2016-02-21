@@ -2,6 +2,7 @@
 using System;
 using WebAutomation.SpecflowGenericSteps;
 using System.Configuration;
+using WebAutomation.SpecFlow;
 
 namespace QualityExcites.Tests.Common
 {

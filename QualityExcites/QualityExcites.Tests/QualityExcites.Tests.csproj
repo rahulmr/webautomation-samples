@@ -60,21 +60,20 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Drawing" />
-    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+    <Reference Include="TechTalk.SpecFlow, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+      <HintPath>..\packages\SpecFlow.2.0.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
-    <Reference Include="WebAutomation.Core, Version=1.0.140.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="WebAutomation.Core, Version=1.0.160.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\WebAutomation.1.0.140\lib\net45\WebAutomation.Core.dll</HintPath>
+      <HintPath>..\packages\WebAutomation.1.0.160\lib\net45\WebAutomation.Core.dll</HintPath>
     </Reference>
-    <Reference Include="WebAutomation.SpecflowGenericSteps, Version=1.0.140.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\WebAutomation.SpecFlowGenericSteps.1.0.140\lib\net45\WebAutomation.SpecflowGenericSteps.dll</HintPath>
+    <Reference Include="WebAutomation.SpecFlow">
+      <HintPath>..\packages\WebAutomation.SpecFlow.1.0.160\lib\net45\WebAutomation.SpecFlow.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver, Version=2.49.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="WebDriver, Version=2.52.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Selenium.WebDriver.2.49.0\lib\net40\WebDriver.dll</HintPath>
+      <HintPath>..\packages\Selenium.WebDriver.2.52.0\lib\net40\WebDriver.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
@@ -141,6 +140,7 @@
     </Content>
     <Content Include="WebAutomation.Core.Unity.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>

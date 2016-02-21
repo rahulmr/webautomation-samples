@@ -53,11 +53,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebAutomation.Core">
-      <HintPath>..\packages\WebAutomation.1.0.140\lib\net45\WebAutomation.Core.dll</HintPath>
+    <Reference Include="WebAutomation.Core, Version=1.0.160.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebAutomation.1.0.160\lib\net45\WebAutomation.Core.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver">
-      <HintPath>..\packages\Selenium.WebDriver.2.50.1\lib\net40\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver, Version=2.52.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.WebDriver.2.52.0\lib\net40\WebDriver.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +101,7 @@
     <Content Include="Pages\Approach3.xml" />
     <Content Include="Pages\Approach2_2.xml" />
     <Content Include="Pages\Approach2_1.xml" />
+    <Content Include="WebAutomation.Generator.dll" />
     <None Include="packages.config" />
     <None Include="Pages\Approach0.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -143,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\Approach1.xml" />
-    <Content Include="WebAutomation.Generator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
