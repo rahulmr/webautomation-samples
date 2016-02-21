@@ -1,7 +1,8 @@
-﻿using OpenQA.Selenium.Firefox;
-using System;
-using WebAutomation.SpecflowGenericSteps;
-using System.Configuration;
+﻿using System;
+using Microsoft.Practices.Unity;
+using OpenQA.Selenium.Firefox;
+using WebAutomation.Core;
+using WebAutomation.Core.WebObjects.WebComponents.Actions;
 using WebAutomation.SpecFlow;
 
 namespace QualityExcites.Tests.Common
@@ -13,6 +14,7 @@ namespace QualityExcites.Tests.Common
         public SpecFlowTest()
         {
             this.Settings = new Settings();
+            DependencyContainer.Container.RegisterType<IClickAction, CustomClick>();
         }
 
         public void OpenBrowser()
