@@ -4,6 +4,9 @@ using HowTo.XML.Pages.Approach3;
 namespace HowTo.XML.Tests
 {
     [TestFixture]
+    [Author("Marek Kudlinski")]
+    [Category("Approach3")]
+    [Property("type", "ui")]
     public class Approach3 : CustomTestBase
     {
         /// <summary>
@@ -11,6 +14,7 @@ namespace HowTo.XML.Tests
         /// (only XML updated)
         /// </summary>
         [Test]
+        [Retry(2)]
         public void Approach3_NewsPage()
         {
             var expectedTableContent = new string[][]

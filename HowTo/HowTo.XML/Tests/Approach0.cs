@@ -5,9 +5,13 @@ using WebAutomation.Core.WebObjects.WebComponents.Value;
 namespace HowTo.XML.Tests
 {
     [TestFixture]
+    [Author("Marek Kudlinski")]
+    [Category("Approach0")]
+    [Property("type", "ui")]
     public class Approach0 : CustomTestBase
     {
         [Test]
+        [Retry(2)]
         public void Approach0_NewsPage()
         {
             var newsPage = this.GetContainer<NewsPage>();
@@ -23,6 +27,7 @@ namespace HowTo.XML.Tests
         }
 
         [Test]
+        [Retry(2)]
         public void Approach0_LoginPage_Success()
         {
             var loginPage = this.GetContainer<LoginPage>();
@@ -36,6 +41,7 @@ namespace HowTo.XML.Tests
         }
 
         [Test]
+        [Retry(2)]
         public void Approach0_LoginPage_Error()
         {
             var loginPage = this.GetContainer<LoginPage>();

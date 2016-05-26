@@ -4,9 +4,13 @@ using HowTo.XML.Pages.Approach2_2;
 namespace HowTo.XML.Tests
 {
     [TestFixture]
+    [Author("Marek Kudlinski")]
+    [Category("Approach2_2")]
+    [Property("type", "ui")]
     public class Approach2_2 : CustomTestBase
     {
         [Test]
+        [Retry(2)]
         public void Approach2_2_NewsPage()
         {
             var expectedTableContent = new string[][]

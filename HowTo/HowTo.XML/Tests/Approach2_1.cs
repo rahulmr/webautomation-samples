@@ -5,9 +5,13 @@ using WebAutomation.Core.WebObjects.WebComponents.Value;
 namespace HowTo.XML.Tests
 {
     [TestFixture]
+    [Author("Marek Kudlinski")]
+    [Category("Approach2_1")]
+    [Property("type", "ui")]
     public class Approach2_1 : CustomTestBase
     {
         [Test]
+        [Retry(2)]
         public void Approach2_1_NewsPage()
         {
             var expectedTableContent = new string[][]

@@ -1,0 +1,1 @@
+..\packages\NUnit.ConsoleRunner.3.2.1\tools\nunit3-console.exe bin\Debug\HowTo.XML.dll --where="cat =~ 'Approach.+'" --work=TestResult --output=TestResult.txt -err=TestResult.err --labels=All
