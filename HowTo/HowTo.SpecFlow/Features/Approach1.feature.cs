@@ -94,6 +94,29 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Approach1 - Login page")]
+        [NUnit.Framework.TestCaseAttribute("Admin", "pass", "Your are logged!", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Admin", "wrong_pass", "Incorrect password!", new string[0])]
+        public virtual void Approach1_LoginPage(string login, string password, string message, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Approach1 - Login page", exampleTags);
+#line 21
+this.ScenarioSetup(scenarioInfo);
+#line 22
+ testRunner.Given("I am on \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+ testRunner.When("I click on Login button in top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+  testRunner.And(string.Format("I fill login form with \"{0}\" and \"{1}\"", login, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+  testRunner.And("I click on Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+ testRunner.Then(string.Format("login message \"{0}\" appears", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

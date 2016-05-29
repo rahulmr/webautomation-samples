@@ -5,14 +5,8 @@ using WebAutomation.SpecFlow;
 namespace HowTo.SpecFlow.Steps.Approach1
 {
     [Binding]
-    public class Approach1Steps : SpecFlowTestBase
+    class NewsPageSteps : SpecFlowTestBase
     {
-        [When(@"I click on News button in top menu")]
-        public void WhenIClickOnButtonInTopMenu()
-        {
-            this.GetContainer<MyWebsite>().MenuNewsButton.Perform.Click();
-        }
-
         [Then(@"following articles are displayed in the News table")]
         public void ThenFollowingArticlessAreDisplayedInTheNewsTable(Table table)
         {

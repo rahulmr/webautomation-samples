@@ -1,28 +1,29 @@
-﻿using HowTo.SpecFlow.Pages.Approach3;
-using System;
+﻿using System;
 using System.Linq;
 using TechTalk.SpecFlow;
 using WebAutomation.Core.WebObjects.WebComponents;
 using WebAutomation.Core.WebObjects.WebComponents.Value;
-using WebAutomation.SpecFlow;
 
-namespace HowTo.SpecFlow.Steps.Approach1
+namespace HowTo.SpecFlow.Steps.Approach3
 {
     [Binding]
-    public class Approach3Steps : SpecFlowTestBase
+    public class Approach3Steps : Approach3SpecFlowTestBase
     {
-        protected GenericPage Page
-        {
-            get
-            {
-                return this.GetContainer<GenericPage>();
-            }
-        }
-
         [When(@"I click on ""(.*)"" (link|button)")]
         public void WhenIClick(string name, string type)
         {
             GetWebComponent(type, name).Perform.Click();
+        }
+
+        [When(@"I fill following fields:")]
+        public void WhenIFillFollowingFields(Table table)
+        {
+            foreach (var field in table.Rows)
+            {
+                Page.Textbox
+                    .With(field["name"])
+                    .Perform.Fill(field["value"]);
+            }
         }
 
         [Then(@"table is displayed")]
@@ -52,17 +53,11 @@ namespace HowTo.SpecFlow.Steps.Approach1
             }
         }
 
-        protected IWebComponent GetWebComponent(string type, params string[] parameters)
+        [Then(@"""(.*)"" (message|text|warning) is displayed")]
+        public void ThenMessageIsDisplayed(string text, string type)
         {
-            switch (type)
-            {
-                case "link":
-                    return Page.Link.With(parameters);
-                case "button":
-                    return Page.Button.With(parameters);
-                default:
-                    throw new ArgumentException($"Incorrect type '{type}'");
-            }
+            // 'type' parameter - not used in current implementation
+            Page.Message.With(text).Assert.Is.Displayed();
         }
     }
 }

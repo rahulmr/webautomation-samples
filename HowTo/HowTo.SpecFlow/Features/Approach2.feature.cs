@@ -97,6 +97,31 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Approach2 - Login page")]
+        [NUnit.Framework.TestCaseAttribute("Admin", "pass", "Your are logged!", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Admin", "wrong_pass", "Incorrect password!", new string[0])]
+        public virtual void Approach2_LoginPage(string login, string password, string message, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Approach2 - Login page", exampleTags);
+#line 21
+this.ScenarioSetup(scenarioInfo);
+#line 22
+ testRunner.Given("I am on \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+ testRunner.When("user clicks \'MyWebsite-MenuLoginButton\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+  testRunner.And(string.Format("user fills \'LoginPage-UserTextbox\' with \'{0}\'", login), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+  testRunner.And(string.Format("user fills \'LoginPage-PasswordTextbox\' with \'{0}\'", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+  testRunner.And("user clicks \'LoginPage-LoginButton\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+ testRunner.Then(string.Format("the \'LoginPage-Message\' has text equal to \'{0}\'", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

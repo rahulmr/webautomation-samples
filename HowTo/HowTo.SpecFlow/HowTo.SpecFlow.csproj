@@ -104,8 +104,11 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpecFlowGenericSteps.cs" />
-    <Compile Include="Steps\Approach1\Approach1Steps.cs" />
+    <Compile Include="Steps\Approach1\LoginPageSteps.cs" />
+    <Compile Include="Steps\Approach1\NavigationSteps.cs" />
+    <Compile Include="Steps\Approach1\NewsPageSteps.cs" />
     <Compile Include="Steps\Approach3\Approach3Steps.cs" />
+    <Compile Include="Steps\Approach3\Approach3SpecFlowTestBase.cs" />
     <Compile Include="Steps\Common.cs" />
   </ItemGroup>
   <ItemGroup>

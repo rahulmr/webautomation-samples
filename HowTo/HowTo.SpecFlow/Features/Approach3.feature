@@ -23,3 +23,17 @@ Scenario: Approach3 - News page
 	| ID 1 | First article  | Article 1 content |
 	| ID 2 | Second article | Article 2 content |
 
+
+Scenario Outline: Approach3 - Login page
+	Given I am on "Home" page
+	When I click on "Login" link
+		And I fill following fields:
+		| name     | value      |
+		| user     | <Login>    |
+		| password | <Password> |
+		And I click on "Login" button
+	Then "<Message>" message is displayed
+Examples: 
+	| Login | Password   | Message             |
+	| Admin | pass       | Your are logged!    |
+	| Admin | wrong_pass | Incorrect password! |
