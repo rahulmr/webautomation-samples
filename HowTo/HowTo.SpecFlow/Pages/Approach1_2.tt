@@ -9,8 +9,8 @@
 // * The namespace in which the generated C# classes should be placed
 // * [Optional] The namespace which should be included in case of using custom attributes.
 // ======================================================
-string xmlFilename = "MyWebSite.xml";
-string desiredNamespace  = "HowTo.SpecFlow.Pages.MyWebSite";
+string xmlFilename = "Approach1_2.xml";
+string desiredNamespace  = "HowTo.SpecFlow.Pages.Approach1_2";
 string customAttributesNamespace = string.Empty;
 // ======================================================
 #>

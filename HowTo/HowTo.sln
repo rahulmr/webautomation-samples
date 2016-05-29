@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowTo.XML", "HowTo.XML\HowTo.XML.csproj", "{F445E429-E56E-42CA-83CA-B6DB3B1F3979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowTo.SpecFlow", "HowTo.SpecFlow\HowTo.SpecFlow.csproj", "{3292B365-5D1E-4F7B-9331-752CF8102847}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F445E429-E56E-42CA-83CA-B6DB3B1F3979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F445E429-E56E-42CA-83CA-B6DB3B1F3979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F445E429-E56E-42CA-83CA-B6DB3B1F3979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3292B365-5D1E-4F7B-9331-752CF8102847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3292B365-5D1E-4F7B-9331-752CF8102847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3292B365-5D1E-4F7B-9331-752CF8102847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3292B365-5D1E-4F7B-9331-752CF8102847}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

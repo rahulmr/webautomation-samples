@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+Page Object Pattern is no longer necesary (it brings too much complexity when using BDD)
+
+Instead of creating components for each instance of controls, we can create components 
+only for their types (buttons, links, tables etc). Then by using parameters you can find 
+the instance.
+-->
+
+<container name="GenericPage">
+  <component name="Link" pxpath="//a[text()='{0}']" />
+
+  <component name="Textbox" pid="{0}" />
+  <component name="Button" pxpath="//button[text()='{0}']" />
+  <component name="Message" pxpath="//*[text()='{0}']"/>
+
+  <component name="TableHeader" xpath="//table/thead/tr/th" />
+  <component name="TableRowCell" pxpath="//table/tbody/tr[{0}]/td[{1}]" />
+</container>

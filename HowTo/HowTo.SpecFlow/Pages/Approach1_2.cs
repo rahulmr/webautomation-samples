@@ -10,7 +10,7 @@
 #region Designer generated code
 #pragma warning disable
 
-namespace HowTo.SpecFlow.Pages.MyWebSite
+namespace HowTo.SpecFlow.Pages.Approach1_2
 {
 	using WebAutomation.Core.WebObjects.Common.Attributes;
 	using WebAutomation.Core.WebObjects.WebComponents;
