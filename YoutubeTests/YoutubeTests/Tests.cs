@@ -3,6 +3,7 @@ using NUnit.Framework;
 using OpenQA.Selenium.Firefox;
 using WebAutomation.Core;
 using YoutubeTests.Pages;
+using OpenQA.Selenium.Chrome;
 
 namespace YoutubeTests
 {
@@ -12,7 +13,7 @@ namespace YoutubeTests
         [TestCase("Hans Zimmer greatest hits", "The greatest hits from Hans Zimmer")]
         public void OpenVideo(string input, string expectedLink)
         {
-            this.WebDriver = new FirefoxDriver();
+            this.WebDriver = new ChromeDriver();
             this.WebDriver.Navigate().GoToUrl("http://www.youtube.com");
 
             var youtubePage = this.GetContainer<YoutubePage>();

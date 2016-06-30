@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Firefox;
+﻿using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using TechTalk.SpecFlow;
 using WebAutomation.SpecFlow;
 using WebAutomation.SpecflowGenericSteps;
@@ -11,7 +12,7 @@ namespace YoutubeTests.PredefinedSteps.Steps
         [BeforeScenario]
         public void BeforeScenario()
         {
-            this.WebDriver = new FirefoxDriver();
+            this.WebDriver = new ChromeDriver();
         }
 
         [AfterScenario]
